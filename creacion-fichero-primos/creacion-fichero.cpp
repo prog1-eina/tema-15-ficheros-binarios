@@ -102,7 +102,7 @@ void inicializar(int primos[], const int n) {
 int main() {
     // El vector «primos» que se declara a continuación es demasiado grande para
     // ser almacenado en la pila (el segmento de memoria donde se ubican
-    // habitualmente las variables locales a una funcion). Con el modificador
+    // habitualmente las variables locales de una función). Con el modificador
     // «static», se indica al compilador que la ubique en el segmento de datos.
     // Os darán más detalles en la asignatura de Arquitectura de Computadores.
     static int primos[MAX_PRIMOS];
