@@ -21,10 +21,12 @@ bool leerFicheroPrimos(int primos[], const int n) {
     f.open(NOMBRE_FICHERO_PRIMOS, ios::binary);
     if (f.is_open()) {
         int i = 0;
-        f.read(reinterpret_cast<char*>(&primos[i]), sizeof(int));
+        int primo;
+        f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         while (!f.eof() && i < n) {
+            primos[i] = primo;
             i++;
-            f.read(reinterpret_cast<char*>(&primos[i]), sizeof(int));
+            f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
         }
         f.close();
         return i == n;

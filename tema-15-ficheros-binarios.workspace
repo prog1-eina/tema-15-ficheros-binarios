@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="tema-15-ficheros-binarios" Database="" Version="10.0.0">
-  <Project Name="02-creacion-fichero-primos" Path="creacion-fichero-primos/creacion-fichero-primos.project" Active="No"/>
-  <Project Name="01-fichero-notas" Path="fichero-notas/fichero-notas.project" Active="Yes"/>
+  <Project Name="02-creacion-fichero-primos" Path="creacion-fichero-primos/creacion-fichero-primos.project" Active="Yes"/>
+  <Project Name="01-fichero-notas" Path="fichero-notas/fichero-notas.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
