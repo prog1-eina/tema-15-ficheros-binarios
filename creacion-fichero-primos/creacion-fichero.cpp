@@ -20,7 +20,7 @@ bool leerFicheroPrimos(int primos[], const int n) {
     ifstream f;
     f.open(NOMBRE_FICHERO_PRIMOS, ios::binary);
     if (f.is_open()) {
-        f.read(reinterpret_cast<char*>(&primos), n * sizeof(int));
+        f.read(reinterpret_cast<char*>(primos), n * sizeof(int));
         bool ok = !f.eof();
         f.close();
         return ok;
