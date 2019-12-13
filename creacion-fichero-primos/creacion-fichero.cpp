@@ -20,16 +20,10 @@ bool leerFicheroPrimos(int primos[], const int n) {
     ifstream f;
     f.open(NOMBRE_FICHERO_PRIMOS, ios::binary);
     if (f.is_open()) {
-        int i = 0;
-        int primo;
-        f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
-        while (!f.eof() && i < n) {
-            primos[i] = primo;
-            i++;
-            f.read(reinterpret_cast<char*>(&primo), sizeof(primo));
-        }
+        f.read(reinterpret_cast<char*>(&primos), n * sizeof(int));
+        bool ok = !f.eof();
         f.close();
-        return i == n;
+        return ok;
     }
     else {
         return false;
@@ -66,9 +60,7 @@ void guardar(const int primos[], const int n) {
     ofstream f;
     f.open(NOMBRE_FICHERO_PRIMOS, ios::binary);
     if (f.is_open()) {
-        for (int i = 0; i < n; i++) {
-            f.write(reinterpret_cast<const char*>(&primos[i]), sizeof(int));                
-        }
+        f.write(reinterpret_cast<const char*>(primos), n * sizeof(int));                
         f.close();
     }
     else {
@@ -94,7 +86,6 @@ void inicializar(int primos[], const int n) {
     }
 }
 
-
 /*
  * Primeras instrucciones de una supuesta aplicación criptográfica que necesita
  * trabajar con un vector que contenga los primeros 5 000 000 números primos.
@@ -110,7 +101,7 @@ int main() {
     static int primos[MAX_PRIMOS];
     
     inicializar(primos, MAX_PRIMOS);
-    
+   
     cout << "Vector con los primeros " << MAX_PRIMOS << " cargado." << endl;
     return 0;
 }
