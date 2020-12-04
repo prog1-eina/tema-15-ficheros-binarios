@@ -1,16 +1,16 @@
-﻿/********************************************************************************\
+﻿/******************************************************************************\
  * Curso de Programación 1. Tema 15 (Ficheros binarios)
  * Autores: Miguel Ángel Latre
- * Última revisión: 5 de diciembre de 2019
+ * Última revisión: 4 de diciembre de 2020
  * Resumen: Funciones que trabajan con un fichero binario de pares NIP-nota.
- * Codificación de caracteres original de este fichero: UTF-8 con BOM
-\********************************************************************************/
+\******************************************************************************/
 #include <iostream>
-#include <fstream>
 #include <iomanip>
+#include <fstream>
+#include <string>
 using namespace std;
 
-const char NOMBRE_FICHERO[] = "prog1.dat";
+const string NOMBRE_FICHERO = "prog1.dat";
 
 
 /*
@@ -19,12 +19,12 @@ const char NOMBRE_FICHERO[] = "prog1.dat";
  *       una secuencia de pares (NIP, nota) solicitados interactivamente al
  *       usuario.
  */
-void crearFicheroNotas(const char nombreFichero[]) {
+void crearFicheroNotas(const string nombreFichero) {
     ofstream f;
     f.open(nombreFichero, ios::binary);
     if (f.is_open()) {
         cout << "Introduzca un NIP (0 para acabar): ";
-        int nip;
+        unsigned int nip;
         cin >> nip;
         while (nip != 0) {
             cout << "Introduzca una nota: ";
@@ -58,14 +58,14 @@ void crearFicheroNotas(const char nombreFichero[]) {
  *       454844  10.0
  *       567896   6.3
  */
-void mostrarFicheroNotas(const char nombreFichero[]) {
+void mostrarFicheroNotas(const string nombreFichero) {
     ifstream f;
     f.open(nombreFichero, ios::binary);
     if (f.is_open()) {
         cout << "  NIP   Nota" << endl;
         cout << "------------" << endl;
         cout << fixed << setprecision(1);
-        int nip;
+        unsigned int nip;
         f.read(reinterpret_cast<char*>(&nip), sizeof(nip));
         while(!f.eof()) {
             double nota;
