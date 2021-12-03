@@ -1,8 +1,17 @@
 ﻿/******************************************************************************\
  * Curso de Programación 1. Tema 15 (Ficheros binarios)
  * Autores: Miguel Ángel Latre
- * Última revisión: 4 de diciembre de 2020
+ * Última revisión: 2 de diciembre de 2021
  * Resumen: Funciones que trabajan con un fichero binario de pares NIP-nota.
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra fichero-notas.cpp -o fichero-notas
+ *       y ejecutarse en Windows a través de la orden
+ *           .\fichero-notas.exe
+ *       o en Linux y macOS
+ *           ./fichero-notas
 \******************************************************************************/
 #include <iostream>
 #include <iomanip>
@@ -24,7 +33,7 @@ void crearFicheroNotas(const string nombreFichero) {
     f.open(nombreFichero, ios::binary);
     if (f.is_open()) {
         cout << "Introduzca un NIP (0 para acabar): ";
-        unsigned int nip;
+        unsigned nip;
         cin >> nip;
         while (nip != 0) {
             cout << "Introduzca una nota: ";
@@ -65,13 +74,11 @@ void mostrarFicheroNotas(const string nombreFichero) {
         cout << "  NIP   Nota" << endl;
         cout << "------------" << endl;
         cout << fixed << setprecision(1);
-        unsigned int nip;
-        f.read(reinterpret_cast<char*>(&nip), sizeof(nip));
-        while(!f.eof()) {
+        unsigned nip;
+        while(f.read(reinterpret_cast<char*>(&nip), sizeof(nip))) {
             double nota;
             f.read(reinterpret_cast<char*>(&nota), sizeof(nota));
             cout << setw(6) << nip << " " << setw(5) << nota << endl;
-            f.read(reinterpret_cast<char*>(&nip), sizeof(nip));
         }
         f.close();
     } else {
