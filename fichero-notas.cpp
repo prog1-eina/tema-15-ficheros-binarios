@@ -3,15 +3,15 @@
  * Autores: Miguel Ángel Latre
  * Última revisión: 2 de diciembre de 2021
  * Resumen: Funciones que trabajan con un fichero binario de pares NIP-nota.
- * Nota: El programa completo está contenido en este fichero, por lo que puede 
- *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
- *       Code.
- *       También puede compilarse desde la terminal través de la orden
- *           g++ -Wall -Wextra fichero-notas.cpp -o fichero-notas
- *       y ejecutarse en Windows a través de la orden
- *           .\fichero-notas.exe
- *       o en Linux y macOS
- *           ./fichero-notas
+ * Nota: El programa completo está contenido en este fichero, por lo que puede 
+ *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
+ *       Code.
+ *       También puede compilarse desde la terminal través de la orden
+ *           g++ -Wall -Wextra fichero-notas.cpp -o fichero-notas
+ *       y ejecutarse en Windows a través de la orden
+ *           .\fichero-notas.exe
+ *       o en Linux y macOS
+ *           ./fichero-notas
 \******************************************************************************/
 #include <iostream>
 #include <iomanip>
