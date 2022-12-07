@@ -24,7 +24,7 @@ const string NOMBRE_FICHERO = "prog1.dat";
 
 /*
  * Pre:  ---
- * Post: Ha creado un fichero binario de nombre «nombreFichero» compuesto por
+ * Post: Crea un fichero binario de nombre «nombreFichero» compuesto por
  *       una secuencia de pares (NIP, nota) solicitados interactivamente al
  *       usuario.
  */
@@ -59,7 +59,7 @@ void crearFicheroNotas(const string nombreFichero) {
  * Pre:  «nombreFichero» es el nombre de un fichero existente binario cuya
  *       estructura consiste en una secuencia de pares (NIP, nota), de tipos
  *       int y double, respectivamente.
- * Post: Ha mostrado en la pantalla del contenido del fichero de nombre
+ * Post: Muestra en la pantalla del contenido del fichero de nombre
  *       «nombreFichero», de acuerdo con el siguiente formato de ejemplo:
  *         NIP   Nota
  *       ------------
