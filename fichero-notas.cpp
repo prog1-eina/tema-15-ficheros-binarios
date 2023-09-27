@@ -47,8 +47,7 @@ void crearFicheroNotas(const string nombreFichero) {
             cin >> nip;
         }
         f.close();
-    }
-    else {
+    } else {
         cerr << "No se ha podido escribir en el fichero \"" << nombreFichero
              << "\"" << endl;
     }
