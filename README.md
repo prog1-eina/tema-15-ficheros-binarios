@@ -10,12 +10,12 @@ Cada fichero de este repositorio contiene un programa completo, por lo que puede
 
 También puede compilarse desde la terminal través de la orden
 
-    g++ -Wall -Wextra fichero-notas.cpp -o fichero-notas
+    g++ -Wall -Wextra fichero-notas.cpp -o fichero-notas
 
 Puede ejecutarse en Windows, después de ser compilado, a través de la orden
 
-    .\fichero-notas.exe
+    .\fichero-notas.exe
 
 y en Linux o macOS, a través de la orden
 
-    ./fichero-notas
+    ./fichero-notas
