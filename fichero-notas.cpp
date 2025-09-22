@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 15 (Ficheros binarios)
  * Autores: Miguel Ángel Latre
  * Última revisión: 2 de diciembre de 2021
@@ -12,7 +12,7 @@
  *           .\fichero-notas.exe
  *       o en Linux y macOS
  *           ./fichero-notas
-\******************************************************************************/
+ *****************************************************************************/
 #include <iostream>
 #include <iomanip>
 #include <fstream>
