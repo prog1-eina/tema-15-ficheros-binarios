@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Tema 15 (Ficheros binarios)
  * Autores: Miguel Ángel Latre
- * Última revisión: 2 de diciembre de 2021
  * Resumen: Funciones que trabajan con un fichero binario de pares NIP-nota.
  * Nota: El programa completo está contenido en este fichero, por lo que puede 
  *       compilarse y ejecutarse con la extensión Code Runner de Visual Studio 
